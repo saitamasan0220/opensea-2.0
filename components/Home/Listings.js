@@ -9,16 +9,43 @@ const style = {
 
 const Listings = () => {
 
+    const [listings, setListings] = useState([])
+
     const marketplace = useMarketplace('0xCe9b05958ceB455A7937F9Ac3f21314689d7d70E')
 
     console.log(marketplace)
 
-    // const getListings = async() => {
+    useEffect(() => {
+        getListings()
+    }, [])
 
-    // }
+    const getListings = async() => {
+        try {
+            const list = await marketplace.getActiveListings()
 
+            setListings(list)
+
+            console.log('listings: ', list)
+
+        } catch(error) {
+            console.log(error)
+        }
+
+    }
+
+    
     return (
-        <div>Listings</div>
+        <div className={style.wrapper}>
+            {listings.length > 0 ? (
+                <>
+                    {listings?.map((listing) => (
+                        <div>NFT CARD HERE</div>
+                    ))}
+                </>
+            ) :(
+                <div>Loading...</div>
+            )}
+        </div>
     )
 }
 

@@ -23,7 +23,7 @@ const style = {
   creator: `text-sm font-medium text-gray-500 text-white`,
   creatorName: `cursor-pointer text-blue-500`,
   verified: `h-5 w-5 text-blue-500`,
-  descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500`,
+  descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500 text-white`,
 }
 
 export default function Home() {
