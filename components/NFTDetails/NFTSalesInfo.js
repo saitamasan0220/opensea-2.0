@@ -12,11 +12,16 @@ const NFTSalesInfo = ({price, buyNFT}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.header}>
-                <div className={style.headerContent}></div>
+                <div className={style.headerContent}>
+                    <AiOutlineClockCircle className={`${style.greyText} ${style.headerIcon}`} />
+                </div>
             </div>
             
-            {/* <h2>{price}</h2>
-            <button onClick={buyNFT}>BUY NFT</button> */}
+            <div className={style.mainContainer}>
+                <div className={style.priceInfoContainer}>
+                    <div className={`${style.greyText} ${style.mediumFont}`}></div>
+                </div>
+            </div>
         </div>
     )
 }
