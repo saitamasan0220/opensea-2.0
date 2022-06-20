@@ -5,10 +5,16 @@ const style = {
 
 }
 
-const NFTImage = () => {
+const NFTImage = ({image}) => {
+    console.log(image)
     return (
         <div>
-            IMAGE GOES HERE
+            {image && <Image
+            src = {image}
+            width = {448}
+            height = {448}
+            alt = "nft"
+            /> }
         </div>
     )
 }

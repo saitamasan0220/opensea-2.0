@@ -25,11 +25,16 @@ const NFT = () => {
         getListing()
     }, [])
 
+    useEffect(() => {
+        if (!address) router.replace('/')
+        
+    }, [address])
+
     const getListing = async () => {
         try {
             setLoading(true)
             const listing = await marketplace.getListing(BigNumber.from(tokenID))
-            console.log('running')
+
             setListing(listing)
             setLoading(false)
         } 
@@ -38,8 +43,6 @@ const NFT = () => {
             console.log(error)
         }
     }
-
-    console.log(listing)
 
     return (
         <TopNavbarLayout>
@@ -50,7 +53,7 @@ const NFT = () => {
                     <div className={style.nftContainer}>
                         <div className={style.leftContainer}>
                             <div className={style.leftElement}>
-                                <NFTImage image={listing}/>
+                                <NFTImage image={listing?.asset?.image}/>
                             </div>
 
                             <div className={style.leftElement}>
