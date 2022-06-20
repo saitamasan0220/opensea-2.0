@@ -5,6 +5,7 @@ import {BigNumber} from 'ethers'
 
 import TopNavbarLayout from '../../../layouts/TopNavbarLayout'
 import NFTImage from '../../../components/NFTDetails/NFTImage'
+import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo'
 
 const style = {
 
@@ -44,6 +45,14 @@ const NFT = () => {
         }
     }
 
+    const buyNFT = async () => {
+        try {
+            await marketplace.buyoutListing(tokenID, 1)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <TopNavbarLayout>
             <div className={style.wrapper}>
@@ -65,7 +74,7 @@ const NFT = () => {
                             {/* <NFTBasicInfo/> */}
 
                             <div className={style.buyoutContainer}>
-                                {/* <NFTSalesInfo/> */}
+                                <NFTSalesInfo price={listing?.buyoutCurrencyValuePerToken?.displayValue} buyNFT={buyNFT} />
                             </div>
                         </div>
                     </div>
