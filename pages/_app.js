@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import {ChainId, ThirdwebProvider} from '@thirdweb-dev/react'
+import {ThemeProvider} from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,9 @@ function MyApp({ Component, pageProps }) {
         }}
         
     >     
-        <Component {...pageProps} />
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
     </ThirdwebProvider>
   )
 }
