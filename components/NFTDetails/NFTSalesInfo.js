@@ -19,7 +19,17 @@ const NFTSalesInfo = ({price, buyNFT}) => {
             
             <div className={style.mainContainer}>
                 <div className={style.priceInfoContainer}>
-                    <div className={`${style.greyText} ${style.mediumFont}`}></div>
+                    <div className={`${style.greyText} ${style.mediumFont}`}>Buy at</div>
+
+                    <div className={style.priceContainer}>
+                        <Image 
+                            src = '/weth-logo.svg'
+                            width={24}
+                            height={24}
+                            alt = 'weth'
+                        />
+                        <span className={style.price}>{price}</span>
+                    </div>
                 </div>
             </div>
         </div>
