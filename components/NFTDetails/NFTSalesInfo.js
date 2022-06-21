@@ -4,7 +4,8 @@ import {AiOutlineQuestionCircle, AiOutlineClockCircle} from 'react-icons/ai'
 import Image from 'next/image'
 
 const style = {
-    wrapper: `flex flex-col divide-y border dark:divide-black dark:rounded-lg dark:border-black`,
+    // wrapper: `flex flex-col divide-y border dark:divide-black dark:rounded-lg dark:border-black`,
+    wrapper: `flex flex-col divide-y border dark:divide-black rounded-lg dark:border-black`,
     header: `flex items-center justify-between rounded-t-lg px-6 py-4 dark:bg-[#262a30]`,
     headerContent: `flex items-center space-x-2`,
     headerIcon: `h-6 w-6`,
