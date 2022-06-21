@@ -6,6 +6,7 @@ import {BigNumber} from 'ethers'
 import TopNavbarLayout from '../../../layouts/TopNavbarLayout'
 import NFTImage from '../../../components/NFTDetails/NFTImage'
 import NFTSalesInfo from '../../../components/NFTDetails/NFTSalesInfo'
+import NFTDetails from '../../../components/NFTDetails/NFTDetails'
 
 const style = {
     wrapper: `h-[100vh] mx-auto flex max-w-2xl flex-col space-y-4 py-4 dark:bg-[#202226] lg:max-w-none lg:py-8 lg:px-24`,
@@ -71,7 +72,7 @@ const NFT = () => {
                             </div>
 
                             <div className={style.leftElement}>
-                                {/* <NFTDetails/> */}
+                                <NFTDetails />
                             </div>
                         </div>
 
