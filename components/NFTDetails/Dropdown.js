@@ -6,7 +6,8 @@ const style = {
     buttonLeft: `flex items-center space-x-4`,
     title: `font-semibold`,
     rightIcon: `h-6 w-6 text-gray-400`,
-    innerTextContainer: `bg-gray-50 p-4 dark:bg-[#313339]`,
+    // innerTextContainer: `bg-gray-50 p-4 dark:bg-[#313339]`,
+    innerTextContainer: `p-4`,
 }
 
 const Dropdown = ({title, icon}) => {

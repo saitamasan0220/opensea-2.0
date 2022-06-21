@@ -22,10 +22,12 @@ const style = {
   // title: `text-4xl font-bold text-black dark:text-white`,
   title: `text-4xl font-bold`,
   creatorInfoContainer: `flex items-center space-x-1`,
-  creator: `text-sm font-medium text-gray-500 text-white`,
+  // creator: `text-sm font-medium text-gray-500 text-white`,
+  creator: `text-sm font-medium text-gray-500`,
   creatorName: `cursor-pointer text-blue-500`,
   verified: `h-5 w-5 text-blue-500`,
-  descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500 text-white`,
+  // descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500 text-white`,
+  descriptionContainer: `max-w-3xl py-2 px-10 text-center text-gray-500`,
 }
 
 export default function Home() {

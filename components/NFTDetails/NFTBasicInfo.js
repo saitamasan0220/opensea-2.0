@@ -14,7 +14,7 @@ const style = {
     subInfoContainer: `hidden lg:block`
 }
 
-const NFTBasicInfo = () => {
+const NFTBasicInfo = ({name}) => {
 
     const actionItems = [
         {

@@ -6,7 +6,7 @@ const style = {
   statWithEthContainer: `flex items-center space-x-1`,
   statItem: `text-2xl font-bold`,
   // statTitle: `text-sm text-gray-400`,
-  statTitle: `text-sm text-gray-100`,
+  statTitle: `text-sm`,
 }
 
 const CollectionStats = ({ stats }) => {
